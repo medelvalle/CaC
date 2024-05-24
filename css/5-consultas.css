@@ -105,6 +105,10 @@ ul {
     cursor: pointer;
 }
 
+#error {
+    color: #00ea41;
+}
+
 /* CONTACT INFO */
 .contact-info {
     background: #000;

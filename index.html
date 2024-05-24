@@ -6,12 +6,13 @@
     <title>Cloudtech</title>
     <link rel="shortcut icon" href="img/cloudif.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/e47052057c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="CSS/1-header.css">
-    <link rel="stylesheet" href="CSS/2-producto-slider.css">
-    <link rel="stylesheet" href="CSS/3-servicios.css">
-    <link rel="stylesheet" href="CSS/4-descripcion.css">
-    <link rel="stylesheet" href="CSS/5-consultas.css">
-    <link rel="stylesheet" href="CSS/7-footer.css">
+    <script type="module" src="JS/index.js"></script>
+    <link rel="stylesheet" href="css/1-header.css">
+    <link rel="stylesheet" href="css/2-producto-slider.css">
+    <link rel="stylesheet" href="css/3-servicios.css">
+    <link rel="stylesheet" href="css/4-descripcion.css">
+    <link rel="stylesheet" href="css/5-consultas.css">
+    <link rel="stylesheet" href="css/7-footer.css">
     
 </head>
 <body>
@@ -115,7 +116,7 @@
                         <div class="details">
                             <h2>BIG DATA</h2>
                             <p>Soluciones y servicios de Big Data que transforman los datos en valor. Integracion como soluciones IOT y deep learning.</p>
-                            <a href="#indicador">+ INFO</a>
+                            <a href="bigdata.html">+ INFO</a>
                             
                         </div>
                     </div>
@@ -130,7 +131,7 @@
                         <div class="details">
                             <h2>AI</h2>
                             <p>Servicios de inteligencia artificial para impulsar su negocio. Chatbots para empresas, desarrollo de modelos y análisis de datos.</p>
-                            <a href="#indicador">+ INFO</a>
+                            <a href="AI.html">+ INFO</a>
                         </div>
                     </div>
                 </div>
@@ -144,7 +145,7 @@
                         <div class="details">
                             <h2>DESARROLLO WEB</h2>
                             <p>Soluciones de desarrollo web, programación de UI/UX y desarrollo de portales por desarrolladores especialistas.</p>
-                            <a href="#indicador">+ INFO</a>
+                            <a href="desarrollo.html">+ INFO</a>
                         </div>
                     </div>
                 </div>
@@ -158,7 +159,7 @@
                         <div class="details">
                             <h2>CLOUD COMPUTING</h2>
                             <p>Migre la Infraestructura y Servicios de IT a la nube y aproveche todos sus beneficios. Modelos de servicios IAAS, PAAS y SAAS</p>
-                            <a href="#indicador">+ INFO</a>
+                            <a href="cloudcomunity.html">+ INFO</a>
                         </div>
                     </div>
                 </div>
@@ -214,7 +215,7 @@
                 <div class="contact-wrapper">
 
                     <div class="contact-form">
-                        <form id="form1" action="https://#########/????" method="post">
+                        <form id="form1" action="destino.html" onsubmit="return validacion();">
                             <p>
                                 <label for="fullname">Nombre completo</label>
                                 <input type="text" name="fullname" id="fullname" placeholder="Ingrese su nombre" >  
@@ -269,7 +270,9 @@
                 <p class="footer-links">
                         Soluciones tecnológicas para empresas
                 </p>
-                <p class="footer-company-name">Copyright @ 2024 <strong>Cloudtech</strong></p>
+                <p class="footer-company-name">Copyright @ 2024 <strong>Cloudtech</strong><br><br>
+                    Realizado por: <br>Martin del Valle y Vanessa Inca</p>
+
             </div>
 
             <div class="footer-center">
@@ -306,5 +309,33 @@
         </section>
 
     </footer>
+    <script>
+        function validacion()
+    {
+        fullname = document.getElementById("fullname").value;
+        email = document.getElementById("correo").value;
+        phone = document.getElementById("telefono").value;
+        affair = document.getElementById("empresa").value;
+
+        if (fullname === '') 
+        {
+            document.getElementById('error').innerHTML = "Tenes que completar todos los datos!";
+            return false;
+        }
+        else if (email === '') {
+            document.getElementById('error').innerHTML = "Tenes que completar todos los datos!";
+            return false;
+        }
+        else if (phone === '') {
+            document.getElementById('error').innerHTML = "Tenes que completar todos los datos!";
+            return false;
+        }
+        else if (affair === '') {
+            document.getElementById('error').innerHTML = "Tenes que completar todos los datos!";
+            return false;
+        }
+        return true;
+    }
+</script>
 </body>
 </html>
