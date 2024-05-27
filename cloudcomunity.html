@@ -6,8 +6,8 @@
     <title>Cloudtech</title>
     <link rel="shortcut icon" href="img/cloudif.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/e47052057c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="CSS/8-estilos2.css">
-    <link rel="stylesheet" href="CSS/5-consultas.css">
+    <link rel="stylesheet" href="css/8-estilos2.css">
+    <link rel="stylesheet" href="css/5-consultas.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <style>
@@ -82,7 +82,7 @@
                 <h1 class="brand">Ponete en contacto con <span>nosotros</span></h1>
                 <div class="contact-wrapper">
                     <div class="contact-form">
-                        <form id="form1" action="https://#########/????" method="post">
+                        <form id="form1" action="destino.html" onsubmit="return validacion()";>
                             <p>
                                 <label for="fullname">Nombre completo</label>
                                 <input type="text" name="fullname" id="fullname" placeholder="Ingrese su nombre" >  
@@ -126,5 +126,34 @@
                 </div>
             </div>
         </section>
+         <script>
+        function validacion()
+    {
+        fullname = document.getElementById("fullname").value;
+        email = document.getElementById("correo").value;
+        phone = document.getElementById("telefono").value;
+        affair = document.getElementById("empresa").value;
+
+        if (fullname === '') 
+        {
+            document.getElementById('error').innerHTML = "Tenes que completar todos los datos!";
+            return false;
+        }
+        else if (email === '') {
+            document.getElementById('error').innerHTML = "Tenes que completar todos los datos!";
+            return false;
+        }
+        else if (phone === '') {
+            document.getElementById('error').innerHTML = "Tenes que completar todos los datos!";
+            return false;
+        }
+        else if (affair === '') {
+            document.getElementById('error').innerHTML = "Tenes que completar todos los datos!";
+            return false;
+        }
+
+        return true;
+    }
+</script>
 </body>
 </html>
