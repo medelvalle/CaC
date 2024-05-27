@@ -78,7 +78,7 @@ body{
 }
 
 .menu .navbar ul li a:hover{
-    color: #FFB500;
+    color: #0aa035;
 }
 
 #menu{
@@ -176,8 +176,8 @@ body{
 }
 
 .imagen{
-    width: 900px;
-    height: 700px;
+    width: 800px;
+    height: 600px;
     border: 30px solid #33383b;
     border-radius: 50%;
     margin-left: 100px;
