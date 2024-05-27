@@ -140,7 +140,6 @@
         email = document.getElementById("correo").value;
         phone = document.getElementById("telefono").value;
         affair = document.getElementById("empresa").value;
-        message = document.getElementById("message").value;
 
         if (fullname === '') 
         {
@@ -159,10 +158,7 @@
             document.getElementById('error').innerHTML = "Tenes que completar todos los datos!";
             return false;
         }
-        else if (message === '') {
-            document.getElementById('error').innerHTML = "Tenes que completar todos los datos!";
-            return false;
-        }
+
         return true;
     }
 </script>
